@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+/* ブログ用のスタイル */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+h1, h2 {
+    color: #2c7bff;
+}
+
+article {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+article h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+article p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* 共通スタイル */
+/* 親の track クラスに Flexbox を適用 */
+.track {
+    display: flex;
+    align-items: center; /* 垂直方向で中央に揃える */
+    margin-bottom: 20px; /* 各トラック間にスペースを追加 */
+    background-color: #f4f4f4; /* 背景色（薄いグレー） */
+    padding: 15px; /* トラックの内側の余白 */
+    border-radius: 8px; /* 角を丸く */
+}
+
+/* track-info クラスのスタイル */
+.track-info {
+    flex: 0 0 auto; /* 幅を自動調整するが縮小はしない */
+    max-width: 300px; /* テキスト部分の最大幅を指定 */
+    padding-right: 100px; /* サムネイルとテキストの間に余白 */
+}
+
+.track-info h3 {
+    background-color: #0780a1; /* 背景色 */
+    color: white; /* 文字色 */
+    padding: 10px 20px; /* 余白 */
+    border-radius: 5px; /* 角丸 */
+    margin-bottom: 10px; /* 下の余白 */
+    width: 300px; /* 横幅を固定に設定 */
+}
+
+/* サムネイルのスタイル */
+.thumbnail {
+    position: relative; /* h3から固定位置で配置 */
+    margin-left: 20px; /* YouTubeとSoundCloudのリンクから20pxの距離 */
+}
+
+.thumbnail img {
+    width: 100%; /* サムネイルの幅を親要素に合わせる */
+    max-width: 200px; /* 最大幅を200pxに設定 */
+    border-radius: 8px; /* 角を丸くする */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* 軽い影 */
+}
+
+/* サムネイルリンクのスタイル */
+.thumbnail a {
+    text-decoration: none; /* リンクの下線を削除 */
+}
