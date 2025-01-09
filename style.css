@@ -69,6 +69,7 @@ article p {
     width: 300px; /* 横幅を固定に設定 */
 }
 
+
 /* サムネイルのスタイル */
 .thumbnail {
     position: relative; /* h3から固定位置で配置 */
@@ -86,3 +87,47 @@ article p {
 .thumbnail a {
     text-decoration: none; /* リンクの下線を削除 */
 }
+
+/* convertCase.htmlのデザイン */
+/* ラジオボタンの枠を指定 */
+.radioBtnArea {
+    width: 580px;
+    height: 8px;
+    padding: 15px;
+    border: gray solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* テキストボックスの枠を指定 */
+.textBoxArea {
+    width: 580px;
+    height: 80px;
+    padding: 15px;
+    border: gray solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+    /* 変換ボタンのデザイン */
+  .btnConvert {
+    background-color: #fff;
+    border: solid 2px #2c7bff;
+    color: #2c7bff;
+    border-radius: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1em;
+    box-shadow: 0 5px 0 #2c7bff;
+    display: inline-block;
+    transition: .3s;
+  }
+  .btnConvert:hover {
+    color: #2c7bff;
+    transform: translateY(5px);
+    box-shadow: 0 0 0 #2c7bff;
+  }
