@@ -23,7 +23,7 @@
                 <h2>アルファベット文字列変換</h2>
                 <p>変換前</p>
                 <div class="radioBtnArea">
-                    <form action="radio.php" method="post">
+                    <form>
                         <input type="radio" id="inq1" name="convertCaseRadioButton" value="1" checked>
                         <label for="inq1">小文字→大文字</label>
                         <input type="radio" id="inq2" name="convertCaseRadioButton" value="2">
@@ -32,17 +32,21 @@
                         <label for="inq3">キャメルケース</label>
                         <input type="radio" id="inq4" name="convertCaseRadioButton" value="4">
                         <label for="inq4">スネークケース</label>
-                    <form>
+                    </form>
                 </div>
                 <div class="textBoxArea">
                         <textarea name="inputText" cols="100" rows="10"></textarea>
                 </div>
                 <p></p>
-                <a href="#" class="btnConvert">変換</a>
+                <div class="btnPosition">
+                    <button class="btnConvert" id="btnConvert">変換</button>
+                </div>
+                <script type="text/javascript" src="convertCase.js"></script>
+
                 <p></p>
                 <p>変換後</p>
                 <div class="textBoxArea">
-                        <textarea name="outputText" cols="100" rows="10"></textarea>
+                    <textarea name="outputText" cols="100" rows="10"></textarea>
                 </div>
             </article>
         </section>
@@ -53,3 +57,6 @@
     </footer>
 </body>
 </html>
+
+<!-- イベント -->
+
