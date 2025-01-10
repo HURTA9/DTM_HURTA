@@ -125,9 +125,16 @@ article p {
     box-shadow: 0 5px 0 #2c7bff;
     display: inline-block;
     transition: .3s;
+    text-align: center;
   }
+
   .btnConvert:hover {
     color: #2c7bff;
     transform: translateY(5px);
     box-shadow: 0 0 0 #2c7bff;
+  }
+
+  .btnPosition {
+    width: 580px;
+    text-align: center;
   }
