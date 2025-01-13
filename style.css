@@ -126,12 +126,39 @@ article p {
     display: inline-block;
     transition: .3s;
     text-align: center;
+    position: relative; /* ::after 位置調整のために必要 */
   }
 
   .btnConvert:hover {
     color: #2c7bff;
     transform: translateY(5px);
     box-shadow: 0 0 0 #2c7bff;
+  }
+
+  /* 左側の矢印 */
+.btnConvert::before {
+    content: ""; /* 疑似要素の内容を空に */
+    display: inline-block;
+    width: 16px; /* 矢印画像の幅 */
+    height: 16px; /* 矢印画像の高さ */
+    margin-right: 0px; /* 文字との間隔を調整 */
+    background-image: url("./images/下矢印.png"); /* 左矢印画像のURL */
+    background-size: contain; /* 画像を要素に収める */
+    background-repeat: no-repeat; /* 画像を繰り返さない */
+    vertical-align: middle; /* 文字と矢印の高さを揃える */
+  }
+
+  /* 右側の矢印 */
+  .btnConvert::after {
+    content: ""; /* 疑似要素の内容は空にしておく */
+    display: inline-block;
+    width: 16px; /* 矢印画像の幅 */
+    height: 16px; /* 矢印画像の高さ */
+    margin-left: 0px; /* 文字との間隔を調整 */
+    background-image: url("./images/下矢印.png"); /* 画像のURLを指定 */
+    background-size: contain; /* 画像を要素に収める */
+    background-repeat: no-repeat; /* 画像を繰り返さない */
+    vertical-align: middle; /* 文字と画像の高さを揃える */
   }
 
   .btnPosition {

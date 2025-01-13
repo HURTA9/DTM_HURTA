@@ -35,18 +35,17 @@
                     </form>
                 </div>
                 <div class="textBoxArea">
-                        <textarea name="inputText" cols="100" rows="10"></textarea>
+                        <textarea id="inputText" name="inputText" cols="100" rows="10"></textarea>
                 </div>
                 <p></p>
                 <div class="btnPosition">
                     <button class="btnConvert" id="btnConvert">変換</button>
                 </div>
-                <script type="text/javascript" src="convertCase.js"></script>
 
                 <p></p>
                 <p>変換後</p>
                 <div class="textBoxArea">
-                    <textarea name="outputText" cols="100" rows="10"></textarea>
+                    <textarea id="outputText" name="outputText" cols="100" rows="10"></textarea>
                 </div>
             </article>
         </section>
@@ -55,6 +54,8 @@
     <footer>
         <p>&copy; 2024-<script type="text/javascript">myDate = new Date() ;myYear = myDate.getFullYear ();document.write(myYear);</script> HURTA</p>
     </footer>
+
+    <script src="convertCase.js"></script>
 </body>
 </html>
 
