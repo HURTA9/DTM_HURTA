@@ -21,7 +21,9 @@
         <section>
             <article>
                 <h2>アルファベット文字列変換</h2>
-                <p>変換前</p>
+                <label for="textArea">変換前</label><br>
+                <label for="textArea" class="error-message">※半角英数字を入力してください</label><br>
+                <label for="textArea" class="error-message">※キャメルケース、スネークケースに変換したい場合は、単語の間にスペースを入れてください</label><br>
                 <div class="radioBtnArea">
                     <form>
                         <input type="radio" id="inq1" name="convertCaseRadioButton" value="1" checked>
@@ -35,17 +37,17 @@
                     </form>
                 </div>
                 <div class="textBoxArea">
-                        <textarea id="inputText" name="inputText" cols="100" rows="10"></textarea>
+                        <textarea id="inputText" cols="100" rows="10"></textarea>
                 </div>
-                <p></p>
+                <br>
                 <div class="btnPosition">
                     <button class="btnConvert" id="btnConvert">変換</button>
                 </div>
 
-                <p></p>
-                <p>変換後</p>
+                <br>
+                <label for="textArea">変換後</label><br>
                 <div class="textBoxArea">
-                    <textarea id="outputText" name="outputText" cols="100" rows="10"></textarea>
+                    <textarea id="outputText" cols="100" rows="10"></textarea>
                 </div>
             </article>
         </section>
@@ -56,6 +58,7 @@
     </footer>
 
     <script src="convertCase.js"></script>
+    
 </body>
 </html>
 

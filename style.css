@@ -99,6 +99,7 @@ article p {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    margin-bottom: -2px;
   }
 
   /* テキストボックスの枠を指定 */
@@ -111,6 +112,7 @@ article p {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    margin-top: -2px;
   }
 
     /* 変換ボタンのデザイン */
@@ -165,3 +167,8 @@ article p {
     width: 580px;
     text-align: center;
   }
+
+  .error-message {
+    font-size: 0.8em; /* 小さめの文字サイズ */
+    color: red; /* 赤色 */
+}

@@ -40,7 +40,9 @@ class ConvertCase {
     // *********************************
     convertCaseRadioButtonClick() {
         // バリデーションチェック
-        //alert(checkValue);
+        if(!this.checkInputStr()){
+            return;
+        }
 
         // ラジオボタンの選択値を取得
         let checkValue = this.getConvertCaseRadioButtonValue();
@@ -49,19 +51,19 @@ class ConvertCase {
         switch(checkValue){
             // 小文字→大文字
             case CONVERT_TO_UPPER:
-                this.ConvertToUpper();
+                this.convertToUpper();
                 break;
             // 大文字→小文字
             case CONVERT_TO_LOWER:
-                this.ConvertToLower();
+                this.convertToLower();
                 break;
             // キャメルケース
             case CONVERT_TO_CAMEL_CASE:
-                this.ConvertToCamelCase();
+                this.convertToCamelCase();
                 break;
             // スネークケース
             case CONVERT_TO_SNAKE_CASE:
-                this.ConvertToSnakeCase();
+                this.convertToSnakeCase();
                 break;
             // それ以外
             default:
@@ -105,10 +107,11 @@ class ConvertCase {
     // 引数　　：なし
     // 戻り値　：なし
     // *********************************
-    ConvertToLower(){
+    convertToLower(){
         try{
             // 入力文字列を取得
             var inputStr = this.inputTextBox.value;
+            inputStr = inputStr.trim();
 
             // 小文字に変換し、出力テキストボックスに出力
             this.outputTextBox.value = inputStr.toLowerCase();
@@ -124,10 +127,11 @@ class ConvertCase {
     // 引数　　：なし
     // 戻り値　：なし
     // *********************************
-    ConvertToUpper(){
+    convertToUpper(){
         try{
             // 入力文字列を取得
             var inputStr = this.inputTextBox.value;
+            inputStr = inputStr.trim();
 
             // 大文字に変換し、出力テキストボックスに出力
             this.outputTextBox.value = inputStr.toUpperCase();
@@ -138,17 +142,18 @@ class ConvertCase {
     }
 
     // *********************************
-    // メソッド：ConvertToCamelCase
+    // メソッド：convertToCamelCase
     // 処理内容：キャメル式変換処理
     // 引数　　：なし
     // 戻り値　：なし
     // *********************************
-    ConvertToCamelCase(){
+    convertToCamelCase(){
         try{
             // スペース、「_」、「-」で文字列を区切る
-            var tagetStr = this.inputTextBox.value;
+            var targetStr = this.inputTextBox.value;
             var separatorStr = /[\s_-]+/;
-            var arrayStr = tagetStr.split(separatorStr);
+            targetStr = targetStr.trim();
+            var arrayStr = targetStr.split(separatorStr);
             
             // キャメルケースに変換する
             let outputStr = ""
@@ -177,16 +182,17 @@ class ConvertCase {
     }
 
     // *********************************
-    // メソッド：ConvertToSnakeCase
+    // メソッド：convertToSnakeCase
     // 処理内容：スネークケース変換処理
     // 引数　　：なし
     // 戻り値　：なし
     // *********************************
-    ConvertToSnakeCase(){
+    convertToSnakeCase(){
         try{
             // スペース、「_」、「-」で文字列を区切り、小文字に変換
             let targetStr = this.inputTextBox.value.toLowerCase();
             let separatorStr = /[\s_-]+/;
+            targetStr = targetStr.trim();
             let arrayStr = targetStr.split(separatorStr);
             
             // スネークケースに変換する
@@ -198,6 +204,29 @@ class ConvertCase {
         catch(e){
             alert(e.message);
         }
+    }
+
+    // *********************************
+    // メソッド：checkInputStr
+    // 処理内容：バリデーションチェック処理
+    // 引数　　：なし
+    // 戻り値　：処理結果（true:成功,false:失敗）
+    // *********************************
+    checkInputStr(){
+        let targetStr = this.inputTextBox.value;
+        // 変換前テキストラベルに入力があるか
+        if (targetStr == null || targetStr === "") {
+            alert("変換したい文字が未入力です。");
+            return false;
+        }
+
+        // 半角英数字、半角スペース、「_」「-」が入力されているか
+        if (!targetStr.match(/^[A-Za-z0-9\s_-]*$/)) {
+            alert("半角英数字のみで入力してください。");
+            return false;
+        }
+
+        return true;
     }
   }
 
