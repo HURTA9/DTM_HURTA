@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #000000; padding: 8px; text-align: center; }
+
+        /* ヘッダーの背景色と文字色を変更 */
+        th {
+            background-color: #4CAF50; /* 緑色 */
+            color: white; /* 白色 */
+            font-size: 12px;  /* フォントサイズを小さく設定 */
+        }
+
+        th:nth-child(1) { width: 10%; }  /* ステータス */
+        th:nth-child(2) { width: 10%; }  /* 日付 */
+        th:nth-child(3) { width: 70%; }  /* 予定 */
+        th:nth-child(4) { width: 10%; }  /* 削除ボタン */
+        .hidden { display: none; }  /* 見えないID列 */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="music.html">Music</a>
+            <a href="blog.html">Blog</a>
+            <a href="tool.html">Tool</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Tool</h1>
+        <section>
+            <article>
+                <h2>ToDoリスト</h2>
+                <label for="inputDate">日付：</label>
+                <input id="inputDate" name="inputDate" type="date" /><br>
+                <label for="schedule">予定：</label>
+                <textarea id="schedule" cols="70" rows="3" maxlength="100"></textarea><br>
+                <div class="btnPosition">
+                    <button id="btnAdd" onclick="addTodo()">追加</button>
+                </div><br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ステータス</th>
+                            <th>日付</th>
+                            <th>予定</th>
+                            <th>削除</th>
+                        </tr>
+                    </thead>
+                    <tbody id="todoTableBody"></tbody>
+                </table><br>
+
+
+
+
+
+
+                
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024-<script type="text/javascript">myDate = new Date() ;myYear = myDate.getFullYear ();document.write(myYear);</script> HURTA</p>
+    </footer>
+
+    <script src="toDolist.js"></script>
+    
+</body>
+</html>
+
+<!-- イベント -->
+
