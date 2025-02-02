@@ -1,174 +1,258 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    margin: 0;
-    padding: 0;
-}
-header, footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-nav a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-}
-/* ブログ用のスタイル */
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 10px;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
 }
 
-h1, h2 {
-    color: #2c7bff;
+header,
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* ブログ用のスタイル */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+h1,
+h2 {
+  color: #2c7bff;
 }
 
 article {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 article h2 {
-    font-size: 1.5em;
-    margin-bottom: 5px;
+  font-size: 1.5em;
+  margin-bottom: 5px;
 }
 
 article p {
-    font-size: 1em;
-    color: #555;
+  font-size: 1em;
+  color: #555;
 }
 
 /* 共通スタイル */
 /* 親の track クラスに Flexbox を適用 */
 .track {
-    display: flex;
-    align-items: center; /* 垂直方向で中央に揃える */
-    margin-bottom: 20px; /* 各トラック間にスペースを追加 */
-    background-color: #f4f4f4; /* 背景色（薄いグレー） */
-    padding: 15px; /* トラックの内側の余白 */
-    border-radius: 8px; /* 角を丸く */
+  display: flex;
+  align-items: center;
+  /* 垂直方向で中央に揃える */
+  margin-bottom: 20px;
+  /* 各トラック間にスペースを追加 */
+  background-color: #f4f4f4;
+  /* 背景色（薄いグレー） */
+  padding: 15px;
+  /* トラックの内側の余白 */
+  border-radius: 8px;
+  /* 角を丸く */
 }
 
 /* track-info クラスのスタイル */
 .track-info {
-    flex: 0 0 auto; /* 幅を自動調整するが縮小はしない */
-    max-width: 300px; /* テキスト部分の最大幅を指定 */
-    padding-right: 100px; /* サムネイルとテキストの間に余白 */
+  flex: 0 0 auto;
+  /* 幅を自動調整するが縮小はしない */
+  max-width: 300px;
+  /* テキスト部分の最大幅を指定 */
+  padding-right: 100px;
+  /* サムネイルとテキストの間に余白 */
 }
 
 .track-info h3 {
-    background-color: #0780a1; /* 背景色 */
-    color: white; /* 文字色 */
-    padding: 10px 20px; /* 余白 */
-    border-radius: 5px; /* 角丸 */
-    margin-bottom: 10px; /* 下の余白 */
-    width: 300px; /* 横幅を固定に設定 */
+  background-color: #0780a1;
+  /* 背景色 */
+  color: white;
+  /* 文字色 */
+  padding: 10px 20px;
+  /* 余白 */
+  border-radius: 5px;
+  /* 角丸 */
+  margin-bottom: 10px;
+  /* 下の余白 */
+  width: 300px;
+  /* 横幅を固定に設定 */
 }
 
 
 /* サムネイルのスタイル */
 .thumbnail {
-    position: relative; /* h3から固定位置で配置 */
-    margin-left: 20px; /* YouTubeとSoundCloudのリンクから20pxの距離 */
+  position: relative;
+  /* h3から固定位置で配置 */
+  margin-left: 20px;
+  /* YouTubeとSoundCloudのリンクから20pxの距離 */
 }
 
 .thumbnail img {
-    width: 100%; /* サムネイルの幅を親要素に合わせる */
-    max-width: 200px; /* 最大幅を200pxに設定 */
-    border-radius: 8px; /* 角を丸くする */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* 軽い影 */
+  width: 100%;
+  /* サムネイルの幅を親要素に合わせる */
+  max-width: 200px;
+  /* 最大幅を200pxに設定 */
+  border-radius: 8px;
+  /* 角を丸くする */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  /* 軽い影 */
 }
 
 /* サムネイルリンクのスタイル */
 .thumbnail a {
-    text-decoration: none; /* リンクの下線を削除 */
+  text-decoration: none;
+  /* リンクの下線を削除 */
 }
 
 /* convertCase.htmlのデザイン */
 /* ラジオボタンの枠を指定 */
 .radioBtnArea {
-    width: 580px;
-    height: 8px;
-    padding: 15px;
-    border: gray solid 2px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: -2px;
-  }
+  width: 580px;
+  height: 8px;
+  padding: 15px;
+  border: gray solid 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: -2px;
+}
 
-  /* テキストボックスの枠を指定 */
+/* テキストボックスの枠を指定 */
 .textBoxArea {
-    width: 580px;
-    height: 80px;
-    padding: 15px;
-    border: gray solid 2px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    margin-top: -2px;
-  }
+  width: 580px;
+  height: 80px;
+  padding: 15px;
+  border: gray solid 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-top: -2px;
+}
 
-    /* 変換ボタンのデザイン */
-  .btnConvert {
-    background-color: #fff;
-    border: solid 2px #2c7bff;
-    color: #2c7bff;
-    border-radius: 20px;
-    padding: 10px 30px;
-    text-decoration: none;
-    font-size: 1em;
-    box-shadow: 0 5px 0 #2c7bff;
-    display: inline-block;
-    transition: .3s;
-    text-align: center;
-    position: relative; /* ::after 位置調整のために必要 */
-  }
+/* 変換ボタンのデザイン */
+.btnConvert {
+  background-color: #fff;
+  border: solid 2px #2c7bff;
+  color: #2c7bff;
+  border-radius: 20px;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 1em;
+  box-shadow: 0 5px 0 #2c7bff;
+  display: inline-block;
+  transition: .3s;
+  text-align: center;
+  position: relative;
+  /* ::after 位置調整のために必要 */
+}
 
-  .btnConvert:hover {
-    color: #2c7bff;
-    transform: translateY(5px);
-    box-shadow: 0 0 0 #2c7bff;
-  }
+.btnConvert:hover {
+  color: #2c7bff;
+  transform: translateY(5px);
+  box-shadow: 0 0 0 #2c7bff;
+}
 
-  /* 左側の矢印 */
+/* 左側の矢印 */
 .btnConvert::before {
-    content: ""; /* 疑似要素の内容を空に */
-    display: inline-block;
-    width: 16px; /* 矢印画像の幅 */
-    height: 16px; /* 矢印画像の高さ */
-    margin-right: 0px; /* 文字との間隔を調整 */
-    background-image: url("./images/下矢印.png"); /* 左矢印画像のURL */
-    background-size: contain; /* 画像を要素に収める */
-    background-repeat: no-repeat; /* 画像を繰り返さない */
-    vertical-align: middle; /* 文字と矢印の高さを揃える */
-  }
+  content: "";
+  /* 疑似要素の内容を空に */
+  display: inline-block;
+  width: 16px;
+  /* 矢印画像の幅 */
+  height: 16px;
+  /* 矢印画像の高さ */
+  margin-right: 0px;
+  /* 文字との間隔を調整 */
+  background-image: url("./images/下矢印.png");
+  /* 左矢印画像のURL */
+  background-size: contain;
+  /* 画像を要素に収める */
+  background-repeat: no-repeat;
+  /* 画像を繰り返さない */
+  vertical-align: middle;
+  /* 文字と矢印の高さを揃える */
+}
 
-  /* 右側の矢印 */
-  .btnConvert::after {
-    content: ""; /* 疑似要素の内容は空にしておく */
-    display: inline-block;
-    width: 16px; /* 矢印画像の幅 */
-    height: 16px; /* 矢印画像の高さ */
-    margin-left: 0px; /* 文字との間隔を調整 */
-    background-image: url("./images/下矢印.png"); /* 画像のURLを指定 */
-    background-size: contain; /* 画像を要素に収める */
-    background-repeat: no-repeat; /* 画像を繰り返さない */
-    vertical-align: middle; /* 文字と画像の高さを揃える */
-  }
+/* 右側の矢印 */
+.btnConvert::after {
+  content: "";
+  /* 疑似要素の内容は空にしておく */
+  display: inline-block;
+  width: 16px;
+  /* 矢印画像の幅 */
+  height: 16px;
+  /* 矢印画像の高さ */
+  margin-left: 0px;
+  /* 文字との間隔を調整 */
+  background-image: url("./images/下矢印.png");
+  /* 画像のURLを指定 */
+  background-size: contain;
+  /* 画像を要素に収める */
+  background-repeat: no-repeat;
+  /* 画像を繰り返さない */
+  vertical-align: middle;
+  /* 文字と画像の高さを揃える */
+}
 
-  .btnPosition {
-    width: 580px;
-    text-align: center;
-  }
+.btnPosition {
+  width: 580px;
+  text-align: center;
+}
 
-  .error-message {
-    font-size: 0.8em; /* 小さめの文字サイズ */
-    color: red; /* 赤色 */
+.error-message {
+  font-size: 0.8em;
+  /* 小さめの文字サイズ */
+  color: red;
+  /* 赤色 */
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  /* 上揃え */
+  max-width: 1000px;
+  /* 必要に応じて調整 */
+  margin: 0 auto;
+}
+
+/* サイドバー */
+.banner {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  min-height: 100vh;
+  /* 画面全体の高さを確保 */
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* メインコンテンツ */
+.content {
+  flex-grow: 1;
+  /* 残りのスペースを占有 */
+  max-width: calc(100% - 250px);
+  /* サイドバーの幅を引いたサイズ */
+  text-align: left;
+  margin-right: 10px;
+}
+
+.table {
+  display: table;
+  width: 100%;
 }
